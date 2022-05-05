@@ -1,0 +1,49 @@
+<div class="conetendor">
+    <div class="con-titulo">
+        <h2 class="titulo">BMI CALCULATOR</h2>
+    </div>
+    <div class="contenedorFondos">
+        <div class="con-fondoItem">
+            <div class="fondoItem dos" >
+                <div class="con-items " style="cursor: pointer;" (click)="masculino()" [ngClass]="{'seleccionado':sexo==='MASCULINO'}">
+                    <i class="fa fa-mars" aria-hidden="true"></i>
+                    <p>MASCULINO</p>
+                </div>
+            </div>
+            <div class="fondoItem dos">
+                <div class="con-items" style="cursor: pointer;" (click)="femenino()" [ngClass]="{'seleccionado':sexo==='FEMENINO'}">
+                    <i class="fa fa-venus" aria-hidden="true"></i>
+                    <p>FEMENINO</p>
+                </div>
+            </div>
+            <div class="fondoItem uno">
+                <div class="con-items">
+                    <p>ALTURA</p>
+                    <div class="numero">{{altura}}<span class="cm">cm</span></div>
+                    <input type="range" (input)="cambiarAltura($event)" class="range" [value]="altura" min="120" max="250">
+                </div>
+            </div>
+            <div class="fondoItem dos">
+                <div class="con-items">
+                    <p>PESO</p>
+                    <div class="numero">{{peso}}</div>
+                    <div class="MasMenos">
+                        <i class="fa fa-minus" aria-hidden="true" (click)="peso=peso-1"></i>
+                        <i class="fa fa-plus" aria-hidden="true" (click)="peso=peso+1"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="fondoItem dos">
+                <div class="con-items">
+                    <p>EDAD</p>
+                    <div class="numero">{{edad}}</div>
+                    <div class="MasMenos">
+                        <i class="fa fa-minus" aria-hidden="true" (click)="edad=edad-1"></i>
+                        <i class="fa fa-plus" aria-hidden="true"(click)="edad=edad+1"></i>
+                    </div>
+                </div>
+            </div>
+            <button (click)="calcularBMI()" class="uno btn">CALCULAR</button>
+        </div>
+    </div>
+</div>

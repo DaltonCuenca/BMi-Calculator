@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+    --colorLetras:#fff;
+    --colorFondo:rgb(25, 23, 57);
+    --colorFondo2:#ff111558;
+}
+body{
+    background: var(--colorFondo);
+    color: var(--colorLetras);
+    font-family: 'Open Sans', sans-serif;
+}
